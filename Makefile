@@ -10,7 +10,7 @@ lint:
 	flake8 hello_world test
 docker_build:
 	docker build -t hello-world-printer .
-USERNAME=KasiaPodrazka
+USERNAME=wrx87509@student.wroclaw.merito.pl
 export DOCKER_PASSWORD=Kulka.444
 TAG=$(USERNAME)/hello-world-printer-k3
 docker_push: docker_build
