@@ -11,9 +11,10 @@ lint:
 docker_build:
 	docker build -t hello-world-printer .
 USERNAME=KasiaPodrazka
+export DOCKER_PASSWORD=Kulka.444
 TAG=$(USERNAME)/hello-world-printer-k3
 docker_push: docker_build
-	@docker login --username $(USERNAME) --password $${Kulka.444}; \
+	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
 	docker tag hello-world-printer $(TAG); \
 	docker push $(TAG); \
 	docker logout;
